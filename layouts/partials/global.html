@@ -1,0 +1,13 @@
+<article class="article article-type-post" itemscope itemprop="post">
+    <div class="article-inner">
+        {{ if .Title }}
+            <header class="article-header">
+                <h1 class="article-title" itemprop="name">{{ .Title }}</h1>
+            </header>
+        {{ end }}
+
+        <div class="article-entry" itemprop="articleBody">
+            {{ .Content }}
+        </div>
+    </div>
+</article>
