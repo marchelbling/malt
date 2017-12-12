@@ -92,6 +92,9 @@ a.article-title:hover,
 .tag-cloud a:hover {
   color: #a0d137;
 }
+h1.article-title {
+  font-size: 2.6em;
+}
 .article-entry h1 {
   font-size: 2em;
 }
