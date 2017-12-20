@@ -285,24 +285,9 @@ h1.article-title {
 }
 .article-entry p,
 .article-entry table {
-  line-height: 1.4em;
-  margin: 1.4em 0;
-}
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
-  font-weight: 600;
-  line-height: 1.4em;
-  margin: 1em 0;
-}
-.article-entry ul,
-.article-entry ol,
-.article-entry dl {
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
+  line-height: 1.4;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .article-entry img,
 .article-entry video {
