@@ -260,24 +260,8 @@ h1.article-title {
   content:"in:";
   color: #c3c3c3;
 }
-.article-category, .article-revisions {
+.article-category {
   float: left;
-  margin-left: 8px;
-  color: #939393;
-}
-.article-revisions:before {
-  content: "\2022\00a0git:";
-  color: #c3c3c3;
-}
-.article-category span {
-  margin-left: 8px;
-}
-.article-category-link {
-  margin-left: 8px;
-}
-.article-comment-link-wrap {
-  float: left;
-  margin-left: 8px;
   color: #939393;
 }
 .article-header {
