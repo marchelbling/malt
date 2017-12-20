@@ -29,7 +29,7 @@ body,
 }
 body {
   background: #fff;
-  font: 18px 'PT Serif', serif;
+  font: 21.5px 'Crimson Text', serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -93,25 +93,32 @@ a.article-title:hover,
   color: #a0d137;
 }
 h1.article-title {
-  font-size: 2.6em;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.4em;
 }
 .article-entry h1 {
-  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8em;
 }
 .article-entry h2 {
-  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6em;
 }
 .article-entry h3 {
-  font-size: 1.3em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4em;
 }
 .article-entry h4 {
+  font-family: 'Lato', sans-serif;
   font-size: 1.2em;
 }
 .article-entry h5 {
-  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
 }
 .article-entry h6 {
-  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05em;
   color: #939393;
 }
 .article-entry hr {
@@ -339,7 +346,7 @@ h1.article-title {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: 'PT Serif', 'STZhongsong', 'Microsoft Yahei', serif;
+  font-family: 'Crimson Text', serif;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -424,7 +431,7 @@ h1.article-title {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: 'Anonymous Pro', monospace;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
@@ -497,7 +504,7 @@ h1.article-title {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace, '华文中宋';
+  font-family: 'Anonymous Pro', monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -572,8 +579,9 @@ h1.article-title {
   content: ')';
 }
 .index-list-item-header h1 {
-    font-size: .6em;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: .6em;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
