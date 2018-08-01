@@ -29,7 +29,7 @@ body,
 }
 body {
   background: #fff;
-  font: 20px 'Crimson Text', serif;
+  font: 19px 'Times', serif;
 }
 .outer {
   max-width: 680px;
@@ -318,7 +318,7 @@ h1.article-title {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: 'Crimson Text', serif;
+  font-family: 'Halant', serif;
   width: 85%;
   background: #f9f9f9;
   margin: 0px auto;
@@ -331,15 +331,14 @@ h1.article-title {
 .article-entry blockquote p:first-of-type:before {
   content: "\201C";
   font-size: 2.6em;
-  vertical-align: -0.35em;
+  vertical-align: -0.5em;
   margin-right: 0.25em;
   line-height: 0.0em;
 }
 .article-entry blockquote p:first-of-type:after {
   content: "\201D";
   font-size: 2.6em;
-  vertical-align: -0.35em;
-  margin-left: 0.15em;
+  vertical-align: -0.5em;
   line-height: 0.0em;
 }
 .article-entry blockquote cite:before {
