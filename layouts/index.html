@@ -8,7 +8,7 @@
             <section id="main" class="outer">
                 <div class="index-list">
                     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-                    {{ range $paginator.Pages }}
+                    {{ range $paginator.Pages.ByDate.Reverse }}
                         <div class="index-list-item">
                             {{ if .Title }}
                                 <header class="index-list-item-header">
