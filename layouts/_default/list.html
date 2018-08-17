@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        <div id="container">
+            {{ partial "header.html" . }}
+
+            <section id="main" class="outer">
+                <div class="index-list">
+                    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+                    {{ range $paginator.Pages.ByDate.Reverse }}
+                        <div class="index-list-item">
+                            {{ if .Title }}
+                                <header class="index-list-item-header">
+                                    <h1 itemprop="name"><a class="article-title" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                                </header>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+
+                {{ partial "pagination.html" . }}
+            </section>
+
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>
