@@ -6,27 +6,12 @@
             </header>
         {{ end }}
 
-        <div class="article-meta">
-            {{ $Site := .Site }}
-            {{ if .Params.categories }}
-            <div class="post-categories">
-                <div class="article-category">
-                    {{ range $i, $e := .Params.categories }}
-                        {{ if gt $i 0 }}
-                            <span>&gt;</span>
-                        {{ end }}
-                        <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-        </div>
-
         <div class="article-entry" itemprop="articleBody">
             {{ .Content }}
         </div>
 
         {{ if .Params.tags }}
+            {{ $Site := .Site }}
             <footer class="article-footer">
                 <ul class="article-tag-list">
                     {{ range .Params.tags }}
