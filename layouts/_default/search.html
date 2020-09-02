@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+
+    <body>
+        <div id="container">
+            {{ partial "header.html" . }}
+
+            <section id="main" class="outer">
+
+                    {{ partial "article.html" . }}
+
+                    <div id="input-container">
+                        <input id="search-input" placeholder="search">
+                    </div>
+
+                    <div id="search-hits">
+                    </div>
+
+                    <script type="text/html" id="search-hit-template">
+                        <div class="search-hit">
+                            <div class="search-hit-content">
+                                <h3 class="search-hit-question">\$\{\{question\}\}</h3>
+                                <h3 class="search-hit-answer">\$\{\{answer\}\}</h3>
+                            </div>
+                        </div>
+                    </script>
+
+            </section>
+
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/search.js"></script>
+</html>

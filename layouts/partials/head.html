@@ -12,6 +12,7 @@
     <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/malt.css">
+    {{ if eq .Layout "search" }}<link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">{{ end }}
 
     <link href="http://gmpg.org/xfn/11" rel="profile">
 
