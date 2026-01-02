@@ -359,6 +359,9 @@ h1.article-title {
   margin-bottom: 15px;
 }
 
+/* =========================================================
+   Margin notes
+   ========================================================= */
 /* Hide checkbox always */
 input.margin-toggle { display: none; }
 
@@ -387,6 +390,45 @@ label.margin-toggle {
   input.margin-toggle:checked + .sidenote {
     display: block;
   }
+}
+
+/* Desktop: create room for a right margin note column */
+@media (min-width: 1000px) {
+  .outer { max-width: var(--container-lg); }
+
+  /* Constrain header content to match article column */
+  #header-inner.inner {
+    max-width: var(--content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep the main text column readable */
+  .article-inner {
+    max-width: var(--content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Put notes in the margin */
+  .article-entry :where(.marginnote, .sidenote) {
+    float: right;
+    clear: right;
+    width: var(--note-w);
+    margin-right: calc(-1 * (var(--note-w) + var(--note-gap)));
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9em;
+    line-height: 1.35;
+    color: #333;
+    opacity: 0.95;
+  }
+
+  /* Hide ⊕ toggles for margin notes only */
+  label.marginnote-toggle { display: none; }
+
+  /* Keep sidenote numbers visible */
+  label.sidenote-toggle { display: inline; }
 }
 
 /* =========================================================
@@ -419,4 +461,44 @@ label.margin-toggle {
   .article-entry :where(h1, h2, h3, h4, h5, h6):hover .heading-anchor { opacity: 0.6; }
 
   .article-entry .heading-anchor:focus { opacity: 1; }
+}
+
+/* =========================================================
+   Sidenote marker: footnote style
+   ========================================================= */
+.article-entry label.sidenote-toggle {
+  display: inline;
+  cursor: default;
+  user-select: none;
+  margin-left: -0.15em;
+}
+
+.article-entry label.sidenote-toggle .mn-ref {
+  display: inline;
+  font-weight: 400;
+  font-size: 0.7em;
+  line-height: 1;
+  vertical-align: super;
+
+  margin-left: 0.08em;
+
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+
+  opacity: 0.7;
+}
+
+.article-entry label.sidenote-toggle:hover .mn-ref,
+.article-entry label.sidenote-toggle:focus .mn-ref {
+  opacity: 1;
+}
+
+.article-entry .sidenote-num {
+  font-size: 0.75em;
+  vertical-align: super;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-right: 0.35em;
 }

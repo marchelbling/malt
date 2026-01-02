@@ -1,0 +1,10 @@
+{{- $current := (.Page.Scratch.Get "mn") | default 0 -}}
+{{- $n := add (int $current) 1 -}}
+{{- .Page.Scratch.Set "mn" $n -}}
+{{- $id := .Get "id" | default (printf "mn-%d" $n) -}}
+
+<label for="{{ $id }}" class="margin-toggle marginnote-toggle">
+  <span class="mn-ref" aria-hidden="true">&#8853;</span>
+</label>
+<input type="checkbox" id="{{ $id }}" class="margin-toggle" />
+<span class="marginnote">{{ .Inner | markdownify }}</span>

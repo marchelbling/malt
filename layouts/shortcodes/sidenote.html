@@ -1,0 +1,5 @@
+{{- $current := (.Page.Scratch.Get "sn") | default 0 -}}
+{{- $n := add (int $current) 1 -}}
+{{- .Page.Scratch.Set "sn" $n -}}
+{{- $id := .Get "id" | default (printf "sn-%d" $n) -}}
+<label for="{{ $id }}" class="margin-toggle sidenote-toggle"><span class="mn-ref" aria-hidden="true">{{ $n }}</span></label><input type="checkbox" id="{{ $id }}" class="margin-toggle" /><span class="sidenote"><span class="sidenote-num" aria-hidden="true">{{ $n }}</span>{{ .Inner | markdownify }}</span>
