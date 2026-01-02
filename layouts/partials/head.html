@@ -16,5 +16,9 @@
 
     <link href="http://gmpg.org/xfn/11" rel="profile">
 
+    {{ if or .Params.math .Site.Params.math }}
+        {{ partial "math.html" . }}
+    {{ end }}
+
     {{ hugo.Generator }}
 </head>
